@@ -1,0 +1,14 @@
+create database harsh;
+
+create table student_table(
+    student_id int primary key AUTO_INCREMENT,
+    student_name varchar(50),
+    phone varchar(10),
+    email varchar(50),
+    DOB date,
+    img_path varchar(400)
+);
+
+
+
+(SELECT MAX(student_id) FROM (SELECT student_id FROM student_table) AS temp) + 1
